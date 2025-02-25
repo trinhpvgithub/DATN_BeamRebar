@@ -1,0 +1,11 @@
+﻿<RevitAddIns>
+    <AddIn Type="Application">
+        <Name>DATN_BeamRebar</Name>
+        <Assembly>DATN_BeamRebar/DATN_BeamRebar.dll</Assembly>
+        <AddInId>D4CFD8F8-1263-4A1E-90A2-54F7BE4A966E</AddInId>
+        <FullClassName>DATN_BeamRebar.Application</FullClassName>
+        <VendorId>Development</VendorId>
+        <VendorDescription></VendorDescription>
+        <VendorEmail></VendorEmail>
+    </AddIn>
+</RevitAddIns>
