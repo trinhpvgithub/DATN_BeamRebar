@@ -1,5 +1,6 @@
 ﻿using Autodesk.Revit.Attributes;
 using Nice3point.Revit.Toolkit.External;
+using DATN_BeamRebar.View;
 
 namespace DATN_BeamRebar.Commands
 {
@@ -12,6 +13,9 @@ namespace DATN_BeamRebar.Commands
     {
         public override void Execute()
         {
-        }
+            //var view=new View();
+            var view = new DATN_BeamRebar.View.View();
+			view.ShowDialog();
+		}
     }
 }
