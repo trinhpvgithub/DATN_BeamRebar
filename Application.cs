@@ -16,9 +16,9 @@ namespace DATN_BeamRebar
 
         private void CreateRibbon()
         {
-            var panel = Application.CreatePanel("Commands", "DATN_BeamRebar");
+            var panel = Application.CreatePanel("Beam", "QUANG");
 
-            panel.AddPushButton<StartupCommand>("Execute")
+            panel.AddPushButton<StartupCommand>("RebarBeam")
                 .SetImage("/DATN_BeamRebar;component/Resources/Icons/RibbonIcon16.png")
                 .SetLargeImage("/DATN_BeamRebar;component/Resources/Icons/RibbonIcon32.png");
         }
