@@ -17,7 +17,7 @@ namespace DATN_BeamRebar.Commands
 			try
 			{
 				var view = new View.View();
-				var viewModel = new ViewModel.RebarBeamViewModel(Document, view);
+				var viewModel = new ViewModel.RebarBeamViewModel(UiDocument, view);
 				viewModel.Run();
 			}
 			catch (Exception)
