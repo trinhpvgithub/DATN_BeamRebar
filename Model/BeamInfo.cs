@@ -2,12 +2,13 @@
 
 public class BeamInfo
 {
-  public List<FamilyInstance> Families { get; set; }
-  public double Height { get; set; }
-  public double Width { get; set; }
-  public XYZ StartPoint { get; set; }
-  public XYZ EndPoint { get; set; }
-  public XYZ Direction { get; set; }
+  private List<FamilyInstance> Families { get; }
+  protected double Height { get; private set; }
+  protected double Width { get; private set; }
+  protected XYZ StartPoint { get; private set; }
+  protected XYZ EndPoint { get; private set; }
+  protected XYZ Direction { get; private set; }
+  protected XYZ CrossDirection { get; private set; }
 
   public BeamInfo(List<Element>  elements )
   {
@@ -35,6 +36,7 @@ public class BeamInfo
   private void GetStartAndEndPoint()
   {
     Direction = ( ( Families[ 0 ].Location as LocationCurve )?.Curve as Line )?.Direction;
+    CrossDirection = Direction!.CrossProduct(XYZ.BasisZ);
     var curves = new List<Curve>();
     foreach ( var beam in Families )
     {

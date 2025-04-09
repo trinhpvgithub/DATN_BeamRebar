@@ -18,12 +18,15 @@ public static class PickObject
     var widths = new List<double>();
     foreach ( var beam in eles )
     {
-      var h = beam.LookupParameter( "h" ).AsDouble();
-      var w = beam.LookupParameter( "b" ).AsDouble();
+      var h = beam.GetParameter( "h" ).AsDouble();
+      var w = beam.GetParameter( "b" ).AsDouble();
       heights.Add(h);
       widths.Add(w);
     }
-    return heights.Count == 1 && widths.Count == 1;
+
+    var enumerable = heights.Distinct().ToList();
+    var distinct = widths.Distinct().ToList();
+    return enumerable.Count == 1 && distinct.Count == 1;
   }
 }
 public class BeamFilter: ISelectionFilter
