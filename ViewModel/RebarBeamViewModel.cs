@@ -35,6 +35,7 @@ namespace DATN_BeamRebar.ViewModel
     private void Ok()
     {
       MessageBox.Show( "Developping......" );
+      MainView.Close();
     }
 
     [ RelayCommand ]

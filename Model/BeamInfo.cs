@@ -14,6 +14,8 @@ public class BeamInfo
   {
     if (elements == null) return;
     Families = elements.Select(x=>x as  FamilyInstance).ToList();
+    GetHeightAndWidth();
+    GetStartAndEndPoint();
   }
 
   private void GetHeightAndWidth()
@@ -22,8 +24,8 @@ public class BeamInfo
     var widths = new List<double>();
     foreach ( var beam in Families )
     {
-      var h = beam.LookupParameter( "h" ).AsDouble();
-      var w = beam.LookupParameter( "b" ).AsDouble();
+      var h = beam.GetParameter( "h" ).AsDouble();
+      var w = beam.GetParameter( "b" ).AsDouble();
       heights.Add(h);
       widths.Add(w);
     }
