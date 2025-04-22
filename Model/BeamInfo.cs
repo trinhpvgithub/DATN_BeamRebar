@@ -2,13 +2,13 @@
 
 public class BeamInfo
 {
-  private List<FamilyInstance> Families { get; }
-  protected double Height { get; private set; }
-  protected double Width { get; private set; }
-  protected XYZ StartPoint { get; private set; }
-  protected XYZ EndPoint { get; private set; }
-  protected XYZ Direction { get; private set; }
-  protected XYZ CrossDirection { get; private set; }
+  public List<FamilyInstance> Families { get; }
+  public double Height { get; private set; }
+  public double Width { get; private set; }
+  public XYZ StartPoint { get; private set; }
+  public XYZ EndPoint { get; private set; }
+  public XYZ Direction { get; private set; }
+  public XYZ CrossDirection { get; private set; }
 
   public BeamInfo(List<Element>  elements )
   {

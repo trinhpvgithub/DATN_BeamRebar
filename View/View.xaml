@@ -87,7 +87,8 @@
                             SelectedItem="{Binding Top1}"
                             DisplayMemberPath="Name"/>
                   <TextBox Grid.Column="2"
-                           materialDesign:HintAssist.Hint="Số lượng"/>
+                           materialDesign:HintAssist.Hint="Số lượng"
+                           Text="{Binding Top1Count}"/>
                </Grid>
                <Grid Grid.Row="1">
                   <Grid.ColumnDefinitions>
@@ -102,7 +103,8 @@
                             SelectedItem="{Binding Top2}"
                             DisplayMemberPath="Name"/>
                   <TextBox Grid.Column="2"
-         materialDesign:HintAssist.Hint="Số lượng"/>
+         materialDesign:HintAssist.Hint="Số lượng"
+                           Text="{Binding Top2Count}"/>
                </Grid>
                <Grid Grid.Row="2">
                   <Grid.ColumnDefinitions>
@@ -117,7 +119,8 @@
                             SelectedItem="{Binding Top3}"
                             DisplayMemberPath="Name"/>
                   <TextBox Grid.Column="2"
-         materialDesign:HintAssist.Hint="Số lượng"/>
+         materialDesign:HintAssist.Hint="Số lượng"
+                           Text="{Binding Top3Count}"/>
                </Grid>
                <Grid Grid.Row="3">
                   <Grid.ColumnDefinitions>
@@ -132,7 +135,8 @@
                             SelectedItem="{Binding Bot1}"
                             DisplayMemberPath="Name"/>
                   <TextBox Grid.Column="2"
-         materialDesign:HintAssist.Hint="Số lượng"/>
+         materialDesign:HintAssist.Hint="Số lượng"
+                           Text="{Binding Bot1Count}"/>
                </Grid>
                <Grid Grid.Row="4">
                   <Grid.ColumnDefinitions>
@@ -147,7 +151,8 @@
                             SelectedItem="{Binding Bot2}"
                             DisplayMemberPath="Name"/>
                   <TextBox Grid.Column="2"
-         materialDesign:HintAssist.Hint="Số lượng"/>
+         materialDesign:HintAssist.Hint="Số lượng"
+                           Text="{Binding Bot2Count}"/>
                </Grid>
                <Grid Grid.Row="5">
                   <Grid.ColumnDefinitions>
@@ -162,7 +167,8 @@
                             SelectedItem="{Binding Bot3}"
                             DisplayMemberPath="Name"/>
                   <TextBox Grid.Column="2"
-         materialDesign:HintAssist.Hint="Số lượng"/>
+         materialDesign:HintAssist.Hint="Số lượng"
+                           Text="{Binding Bot3Count}"/>
                </Grid>
             </Grid>
          </GroupBox>
@@ -192,7 +198,8 @@ Text="Setting thép đai" />
                             SelectedItem="{Binding StirrupCenter}"
                             DisplayMemberPath="Name"/>
                   <TextBox Grid.Column="2"
-         materialDesign:HintAssist.Hint="Số lượng"/>
+         materialDesign:HintAssist.Hint="Số lượng"
+                           Text="{Binding StirrupCenterSpacing}"/>
                </Grid>
                <Grid Grid.Row="1">
                   <Grid.ColumnDefinitions>
@@ -207,7 +214,8 @@ Text="Setting thép đai" />
                             SelectedItem="{Binding Stirrup}"
                             DisplayMemberPath="Name"/>
                   <TextBox Grid.Column="2"
-         materialDesign:HintAssist.Hint="Số lượng"/>
+         materialDesign:HintAssist.Hint="Số lượng"
+                           Text="{Binding StirrupSpacing}"/>
                </Grid>
             </Grid>
          </GroupBox>
@@ -223,6 +231,7 @@ Text="Setting thép đai" />
                <Grid.RowDefinitions>
                   <RowDefinition/>
                   <RowDefinition/>
+                  <RowDefinition/>
                </Grid.RowDefinitions>
                <Grid>
                   <Grid.ColumnDefinitions>
@@ -232,7 +241,8 @@ Text="Setting thép đai" />
                   </Grid.ColumnDefinitions>
                   <TextBlock Text="Neo trên"/>
                   <TextBox Grid.Column="1"
-                           materialDesign:HintAssist.Hint="Chiều dài"/>
+                           materialDesign:HintAssist.Hint="Chiều dài"
+                           Text="{Binding TopAnchor}"/>
                </Grid>
                <Grid Grid.Row="1">
                   <Grid.ColumnDefinitions>
@@ -242,7 +252,19 @@ Text="Setting thép đai" />
                   </Grid.ColumnDefinitions>
                   <TextBlock Text="Neo dưới"/>
                   <TextBox Grid.Column="1"
-                           materialDesign:HintAssist.Hint="Chiều dài"/>
+                           materialDesign:HintAssist.Hint="Chiều dài"
+                           Text="{Binding BotAnchor}"/>
+               </Grid>
+               <Grid Grid.Row="2">
+                  <Grid.ColumnDefinitions>
+                     <ColumnDefinition/>
+                     <ColumnDefinition/>
+                     <ColumnDefinition/>
+                  </Grid.ColumnDefinitions>
+                  <TextBlock Text="Lớp BV"/>
+                  <TextBox Grid.Column="1"
+            materialDesign:HintAssist.Hint="Chiều dài"
+            Text="{Binding Cover}"/>
                </Grid>
             </Grid>
          </GroupBox>
@@ -269,7 +291,7 @@ Text="Setting thép đai" />
                      Orientation="Horizontal"
                      HorizontalAlignment="Right">
             <Button Content="OK" 
-                    Command="{Binding OKCommand}"/>
+                    Command="{Binding OkCommand}"/>
             <Button Content="Cancel" Command="{Binding CancelCommand}"/>
          </StackPanel>
       </Grid>
