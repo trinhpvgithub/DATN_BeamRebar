@@ -8,8 +8,7 @@
         mc:Ignorable="d"
         Title="BeamRebar" 
         SizeToContent="WidthAndHeight"
-        WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize">
+        WindowStartupLocation="CenterScreen">
    <Window.Resources>
       <ResourceDictionary>
          <ResourceDictionary.MergedDictionaries>
@@ -283,10 +282,11 @@ Text="Setting thép đai" />
                         Width="auto"
                         Text="Mặt cắt dầm" />
             </GroupBox.Header>
-            <Canvas Name="PreviewCanvas"
-                  Width="200"
-                  Height="350"/>
-         </GroupBox>
+                <Canvas Name="PreviewCanvas"
+                  Width="auto"
+                  Height="auto">
+                </Canvas>
+            </GroupBox>
          <StackPanel Grid.Row="2"
                      Orientation="Horizontal"
                      HorizontalAlignment="Right">

@@ -29,7 +29,7 @@ public class LowerRebar
 
     private void RebarAnalys()
     {
-        if (Quantity == 0 || Quantity == 1) return;
+        if (Quantity is 0 or 1) return;
         Start = Start.Add(BeamInfo.Height * -XYZ.BasisZ);
         End = End.Add(BeamInfo.Height * -XYZ.BasisZ);
         switch (RebarBeamType)
@@ -83,15 +83,13 @@ public class LowerRebar
         var host = DirectShape.CreateElement(Document, new ElementId(BuiltInCategory.OST_StructuralFraming));
         foreach (var curves in Curves)
         {
-
             try
             {
                 Document.CreateRebarSingle(RebarStyle.Standard, RebarBarType, host, BeamInfo.CrossDirection, curves);
-
             }
-            catch (Exception)
+            catch ( Exception )
             {
-
+                // ignored
             }
         }
     }
